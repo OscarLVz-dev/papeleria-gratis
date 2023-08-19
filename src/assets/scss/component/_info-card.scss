@@ -1,0 +1,56 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  37. info-card CSS
+/*----------------------------------------*/
+.normal-card{
+    &-single{
+        padding: 15px 20px;
+        border: 1px solid var(--clr-common-fcopy-border);
+        border-radius: 5px;
+        ul {
+            li{
+                span{
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: var(--clr-common-heading);
+                    position: relative;
+                    top: 2px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.cardwith__text-single{
+    padding: 40px 30px 35px 30px;
+    border-radius: 5px;
+    background: var(--clr-common-white);
+    box-shadow: 0px 20px 60px rgba(6, 21, 59, 0.08);
+    &-title{
+       h2{
+           font-size: 20px;
+           font-weight: 700;
+           color: var(--clr-common-heading);
+       }
+    }
+    &-subtitle{
+     p{
+         font-size: 15px;
+     }
+    }
+    &-btn{
+       a{
+           font-size: 15px;
+           color: var(--clr-theme-1);
+           font-weight: 500;
+           &:hover{
+               color: var(--clr-common-hover);
+           }
+           i{
+               margin-left: 7px;
+               vertical-align: middle;
+           }
+       }
+    }
+}

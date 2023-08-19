@@ -1,0 +1,22 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  40. information-chart CSS
+/*----------------------------------------*/
+.graph-area{
+    img{
+       @media #{$md,$sm,$xs} {
+           width: 100%;
+       }
+    }
+}
+.pie-area{
+    img{
+        
+        @media #{$md,$sm} {
+            width:100% ;
+        }
+        @media #{$xs} {
+            width: 100%;
+        }
+    }
+}

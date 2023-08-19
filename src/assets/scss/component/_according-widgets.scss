@@ -1,0 +1,99 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   26. according-widgets CSS
+/*----------------------------------------*/
+
+// Default Style start here
+.according-tabs {
+	&-title {
+		font-size: 20px;
+		color: var(--clr-common-heading);
+	}
+}
+
+.faq__content-widgets {
+	& .accordion-item:first-of-type .accordion-button {
+		border-radius: 0;
+		font-size: 18px;
+		font-weight: 500;
+		border-radius: 5px 5px 0px 0px;
+		height: 55px;
+	}
+	& .accordion-button::after {
+		font-family: "Font Awesome 5 pro";
+		width: auto;
+		height: auto;
+		margin-left: auto;
+		content: "\f0d7";
+		background: #666;
+		color: #666;
+		font-size: 17px;
+	}
+	& .accordion-button:not(.collapsed)::after {
+		content: "\f0d7";
+		font-family: "Font Awesome 5 Pro";
+		color: #666;
+		background-color: #666;
+	}
+	& .accordion-button:not(.collapsed) {
+		background: #f5f7f9;
+		border-radius: 5px 5px 0px 0px;
+	}
+	& .accordion-button {
+		background: #f5f7f9;
+		border: none;
+		font-size: 18px;
+		font-weight: 500;
+		color: var(--clr-common-heading);
+		border-radius: 5px;
+		height: 55px;
+		padding: 0px 30px;
+		@media #{$xxs} {
+			font-size: 16px;
+			text-align: left;
+			padding: 0px 15px;
+		}
+	}
+	& .accordion-item {
+		margin-bottom: 10px;
+	}
+	& .accordion-button:focus {
+		z-index: 3;
+		border-color: none;
+		outline: 0;
+		box-shadow: none;
+	}
+	& .accordion-collapse {
+		border: none;
+	}
+	& .accordion-body {
+		background: var(--clr-common-white);
+		padding: 30px 30px 28px 30px;
+		font-weight: 400;
+		font-size: 16px;
+		border-radius: 0px 0px 5px 5px;
+		border: 1px solid #f1f1f1;
+	}
+}
+
+// Default Style end here
+
+.faq__content-widgets2 {
+	& .accordion-button:not(.collapsed)::after {
+		content: "\f068";
+		font-family: "Font Awesome 5 Pro";
+		color: var(--clr-common-heading);
+		background-color: var(--clr-common-heading);
+		font-size: 15px;
+	}
+	& .accordion-button::after {
+		font-family: "Font Awesome 5 pro";
+		width: auto;
+		height: auto;
+		margin-left: auto;
+		content: "\f067";
+		background: var(--clr-common-heading);
+		color: var(--clr-common-heading);
+		font-size: 15px;
+	}
+}

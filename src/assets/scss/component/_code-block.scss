@@ -1,0 +1,32 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  34. code-block CSS
+/*----------------------------------------*/
+.list__widgets-subtile {
+	.bg-border {
+		color: var(--clr-common-code-block);
+		background-color: var(--clr-common-fcopy-border);
+		padding: 5px 8px;
+		border-radius: 2px;
+	}
+	span {
+		color: var(--clr-common-code-block);
+	}
+}
+.block-common {
+	padding: 15px 50px 0px 50px;
+	border: 1px solid var(--clr-common-fcopy-border);
+	background-color: #fbfbfb;
+	@media #{$md,$sm,$xs} {
+		padding: 15px 30px 0px 30px;
+	}
+	@media #{$xxs} {
+		padding: 15px 20px 0px 20px;
+	}
+	pre {
+		code {
+			font-size: 15px;
+			color: var(--clr-common-heading);
+		}
+	}
+}

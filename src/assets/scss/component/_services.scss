@@ -1,0 +1,79 @@
+
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  05. services CSS
+/*----------------------------------------*/
+
+// home 1 services  start here
+.duservices{
+    &__single{
+        padding: 38px 25px 43px 30px;
+        background: linear-gradient(#f1f4fe 0%, #fff 100%);
+        @include transition(0.3s);
+        border-radius: 10px;
+        @media #{$lg,$xs} {
+            padding: 43px 25px 40px 30px;
+		}
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--clr-common-heading);
+            margin-bottom: 20px;
+            @include transition(.3s);
+            &:hover{
+                color: var(--clr-theme-1);
+            }
+        }
+        p {
+            font-size: 15px;
+        }
+        .read-more{
+            font-size: 15px;
+            color: var(--clr-theme-1);
+            font-weight: 500;
+            @include transition(.3s);
+            &:hover{
+                color: var(--clr-common-hover);
+            }
+        }
+        &-icon{
+            @include transition(0.3s);
+            @media #{$lg,$xs} {
+                margin-right: 20px;
+            }
+        }
+        &:hover{
+            box-shadow: 0px 3px 2px 0px #D0D4F3;
+            & .duservices__single-icon {
+                transform: translateY(-10px);
+            }
+        }
+    }
+    &__single2{
+        background: linear-gradient(#f1fef8 0%, #fff 100%);
+        &:hover{
+            box-shadow: 0px 6px 2px 2px #F2FEF9;
+        }
+    }
+    &__single3{
+        background: linear-gradient(#fef8f1 0%, #fff 100%);
+        &:hover{
+            box-shadow: 0px 6px 2px 0px #FEF8F1;
+        }
+    }
+}
+// home 1 services  end here
+
+//home 2 services start here
+
+.duservices2__single{
+    box-shadow:(0px 20px 30px rgba(8, 25, 74, 0.08));
+    filter: drop-shadow(0px 20px 30px rgba(8, 25, 74, 0.08));
+    background: transparent;
+    @include transition(.3s);
+    &:hover{
+        box-shadow: 0px 70px 60px rgba(8, 25, 74, 0.08);
+        filter: drop-shadow(0px 70px 60px rgba(8, 25, 74, 0.08));
+    }
+}
+

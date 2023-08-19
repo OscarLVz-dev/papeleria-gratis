@@ -1,0 +1,41 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   04. brand CSS
+/*----------------------------------------*/
+
+.brand2-bg{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+}
+.f-shape-1 {
+	position: absolute;
+	right: 29.1%;
+	bottom: 29%;
+}
+.f-shape-2 {
+	position: absolute;
+	top: 0;
+	left: 29.5%;
+}
+.brand-subtitle{
+    p {
+        font-size: 18px;
+        color: #666;
+        span {
+            color: black;
+            font-weight: 700;
+          }
+      }
+}
+.brand-shape {
+	position: absolute;
+	top: 0;
+	right: 250px;
+	z-index: -1;
+    @media #{$xl,$lg,$md,$sm,$xs} {
+        right: 0px;
+    }
+}
+
+

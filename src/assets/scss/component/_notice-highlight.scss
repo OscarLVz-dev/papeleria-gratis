@@ -1,0 +1,165 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   25. notice-highlight CSS
+/*----------------------------------------*/
+
+// Notice & Highlight first start here
+.notice__highlight-items-first {
+	padding: 40px 80px 25px 80px;
+	border-left: 8px solid var(--clr-common-green1);
+	@media #{$lg} {
+		padding: 40px 50px 25px 50px;
+	}
+	@media #{$md,$sm,$xs} {
+		padding: 20px 30px 5px 30px;
+	}
+	@media #{$xxs} {
+		padding: 20px 20px 5px 20px;
+	}
+	p {
+		font-size: 16px;
+		span {
+			background-color: var(--clr-common-green1);
+			padding: 0px 7px;
+			color: var(--clr-common-white);
+			border-radius: 4px;
+			height: 25px;
+			line-height: 25px;
+			display: inline-block;
+			text-align: center;
+		}
+	}
+}
+// Notice & Highlight first end here
+
+// Notice & Highlight second start here
+.notice__highlight-items-second {
+	padding: 20px 80px 5px 80px;
+	border-left: 8px solid #ff8a24;
+	@media #{$lg} {
+		padding: 40px 50px 25px 50px;
+	}
+	@media #{$md,$sm,$xs} {
+		padding: 20px 30px 5px 30px;
+	}
+	@media #{$xxs} {
+		padding: 20px 20px 5px 20px;
+	}
+	span {
+		font-weight: 500;
+	}
+}
+// Notice & Highlight second end here
+
+// Notice & Highlight third start here
+.notice__highlight-items-third {
+	padding: 40px 80px 25px 80px;
+	border-left: 8px solid #e11c1c;
+	@media #{$lg} {
+		padding: 40px 50px 25px 50px;
+	}
+	@media #{$md,$sm,$xs} {
+		padding: 20px 30px 5px 30px;
+	}
+	@media #{$xxs} {
+		padding: 20px 20px 5px 20px;
+	}
+	span {
+		font-weight: 500;
+	}
+}
+// Notice & Highlight third end here
+
+// Notice & Highlight third start here
+.notice__highlight-items-highlight {
+	padding: 25px 40px 11px 45px;
+	border: 1px solid #eee;
+	@media #{$md,$sm,$xs} {
+		padding: 25px 30px 11px 30px;
+	}
+	@media #{$xxs} {
+		padding: 25px 20px 11px 20px;
+	}
+	&-title {
+		h4 {
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
+	span {
+		background-color: #fe0;
+		color: var(--clr-common-heading);
+	}
+}
+.notice__highlight-items-highlight2 {
+	span {
+		background-color: var(--clr-common-green2);
+		color: var(--clr-common-heading);
+	}
+}
+.notice__highlight-items-highlight3 {
+	span {
+		background-color: var(--clr-common-red1);
+		color: var(--clr-common-heading);
+	}
+}
+// Notice & Highlight third end here
+
+// Notice & Explanation third end here
+.notice__explanation {
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid #8bd6fc;
+	&-items {
+		padding: 35px 35px 20px 40px;
+		background: linear-gradient(#9addff 0%, #ecf9ff 100%);
+		border-radius: 5px;
+		@media #{$md,$sm,$xs} {
+			padding: 35px 30px 20px 30px;
+		}
+		@media #{$xxs} {
+			padding: 35px 20px 20px 20px;
+		}
+		p {
+			color: var(--clr-common-heading);
+		}
+	}
+	&-title {
+		position: absolute;
+		top: -8px;
+		background: var(--clr-common-white);
+		padding: 0px 8px;
+		h4 {
+			font-size: 12px;
+			text-transform: uppercase;
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.notice__explanation2 {
+	border: 1px solid #97ffcb;
+	&-title {
+		h4 {
+			color: #15cf72;
+		}
+	}
+}
+.notice__explanation {
+	&-items2 {
+		background: linear-gradient(#cbf8d4 0%, #ebfff9 100%);
+	}
+}
+.notice__explanation3 {
+	border: 1px solid #ffe1e1;
+	&-title {
+		h4 {
+			color: #cf1515;
+		}
+	}
+}
+.notice__explanation {
+	&-items3 {
+		background: linear-gradient(#ffe1e1 0%, #fff8eb 100%);
+	}
+}

@@ -1,0 +1,80 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   32. progressbar-widgets CSS
+/*----------------------------------------*/
+
+// Progress bar basic style start here
+.progress-basic{
+    & .progress-bar {
+        background-color: var(--clr-theme-1);
+        transition: width .6s ease;
+        height: 5px;
+    }
+    &-1{
+        width: 40%;
+     }
+     &-2{
+        width: 50%;
+    }
+    &-3{
+        width: 63%;
+    }
+    &-4{
+        width: 76%;
+    }
+    &-5{
+        width: 88%;
+    }
+    .progress {
+        background-color: #eeedf3;
+        border-radius: 0px;
+        height: 5px;
+    }
+}
+
+
+// Progress bar basic style end here
+
+.progress-labels{
+    .progress {
+        background-color: #eeedf3;
+        border-radius: 0px;
+        height: 25px;
+    }
+    & .progress-bar {
+        background-color: var(--clr-theme-1);
+        transition: width .6s ease;
+        height: 25px;
+        font-size: 15px;
+    }
+}
+
+// Circle with Counter start here
+
+.skill-warp {
+   
+    &__single-skill {
+        margin-right: 28px;
+        display: inline-block;
+        margin-bottom: 10px;
+        & .skill-box {
+            text-align: center;
+            position: relative;
+            & h2 {
+                position: absolute;
+                top: 50px;
+                right: 40px;
+                color: var(--clr-common-heading);
+                font-size: 24px;
+                display: inline-block;
+                font-weight: 500;
+                & span {
+                    font-size: 24px;
+                    margin-left: -5px;
+                }
+            }
+        }
+    }
+   
+}
+  // Circle with Counter end here

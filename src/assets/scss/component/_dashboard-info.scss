@@ -1,0 +1,49 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  36. dashboard-info CSS
+/*----------------------------------------*/
+
+.dashboard__info {
+	&-img {
+		img {
+			width: 100%;
+		}
+	}
+	&-img-csscode {
+		img {
+			width: inherit;
+			@media #{$md,$sm,$xs} {
+				width: 100%;
+			}
+		}
+	}
+	ul {
+		li {
+			position: relative;
+			padding-left: 36px;
+			color: var(--clr-common-body);
+			counter-increment: li;
+			font-size: 16px;
+			margin-left: 0px;
+			margin-bottom: 13px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				content: counter(li);
+				width: 26px;
+				height: 26px;
+				background: var(--clr-common-du-color);
+				color: var(--clr-common-white);
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 100%;
+				font-size: 14px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+		}
+	}
+}

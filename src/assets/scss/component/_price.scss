@@ -1,0 +1,157 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   11. price CSS
+/*----------------------------------------*/
+
+.price-tabs {
+	background-color: transparent;
+}
+.price__tab {
+	ul {
+		li {
+			margin-right: 20px;
+			margin-bottom: 9px;
+			@media #{$xs} {
+				margin-right: 10px;
+			}
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+	& .nav-pills .nav-link {
+		border-radius: 0.25rem;
+		padding: 7px 30px;
+		font-size: 15px;
+		color: var(--clr-common-heading);
+		border: 1px solid var(--clr-common-fcopy-border);
+		background-color: var(--clr-bg-white);
+		@include transition(0.3s);
+		&:hover {
+			background-color: var(--clr-theme-1);
+			color: var(--clr-bg-white);
+			border-color: var(--clr-theme-1);
+		}
+	}
+	& .nav-pills .nav-link.active {
+		border: 1px solid transparent;
+	}
+	& .nav-pills .nav-link.active,
+	.nav-pills .show > .nav-link {
+		color: #fff;
+		background-color: var(--clr-theme-1);
+	}
+}
+
+.duprice {
+	padding: 30px 35px;
+	box-shadow: (0px 10px 80px rgba(8, 18, 71, 0.08));
+	border-radius: 10px;
+	background: var(--clr-common-white);
+	box-shadow: 0px 10px 80px rgba(8, 18, 71, 0.08);
+	&__top {
+		text-align: center;
+		border-bottom: 1px solid var(--clr-common-fcopy-border);
+		padding-bottom: 24px;
+		span {
+			color: var(--clr-common-heading);
+			margin-bottom: 6px;
+			display: inline-block;
+		}
+		& .price-title {
+			font-size: 36px;
+			font-family: $roboto;
+			font-weight: 700;
+		}
+	}
+	&__bottom {
+		margin-top: 30px;
+		ul {
+			@media #{$md,$sm,$xs} {
+				width: fit-content;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			li {
+				margin-bottom: 7px;
+				font-size: 15px;
+				i {
+					margin-right: 12px;
+					color: var(--clr-theme-1);
+				}
+			}
+		}
+	}
+	& .price-btn {
+		padding: 0px 55px;
+		height: 50px;
+		line-height: 50px;
+	}
+}
+.duprice-color {
+	background: linear-gradient(#8067ff 0%, #3817e3 100%);
+	& .duprice__top {
+		span {
+			color: var(--clr-common-white);
+		}
+		& .price-title {
+			color: var(--clr-common-white);
+		}
+	}
+
+	& .bottom-ulcolor {
+		li {
+			color: var(--clr-common-white);
+			i {
+				color: var(--clr-common-white);
+			}
+		}
+	}
+	.price-color-white {
+		& .price-btn {
+			background-color: var(--clr-bg-white);
+			color: var(--clr-common-heading);
+			border: 1px solid var(--clr-common-white);
+			&:hover {
+				background-color: var(--clr-theme-1);
+				color: var(--clr-common-white);
+				border: 1px solid var(--clr-common-white);
+			}
+		}
+	}
+}
+
+.price-shape1 {
+	position: absolute;
+	right: 0;
+	animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+	@media #{$sm,$xs} {
+		display: none;
+	}
+}
+.price-shape2 {
+	position: absolute;
+	top: 67%;
+	left: -28%;
+	animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+	@media #{$xxl,$xl,$md,$lg,$sm,$xs} {
+		display: none;
+	}
+}
+.price-shape3 {
+	position: absolute;
+	right: 0;
+	top: 42%;
+	z-index: -1;
+	@media #{$md,$sm,$xs} {
+		display: none;
+	}
+}
+.duprice-icon {
+	position: absolute;
+	right: 13px;
+	top: 9px;
+	i {
+		color: var(--clr-common-white);
+	}
+}

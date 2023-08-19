@@ -1,0 +1,171 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   27. quotation CSS
+/*----------------------------------------*/
+// quotation style one start here
+.quotation_style-one{
+    &-title{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    blockquote{
+        p{
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 38px;
+            color: var(--clr-common-heading);
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+        i{
+            font-size: 30px;
+            color: #E8E8E8;
+            margin-bottom: 25px;
+        }
+        h4{
+            font-size: 18px;
+            line-height: 38px;
+            font-weight: 500;
+        }
+    }
+}
+// quotation style one end here
+
+// quotation style two start here
+.quotation_style-two-items {
+	background: #f3f8ff;
+    padding: 38px 40px 20px 40px;
+    border-left: 5px solid var(--clr-theme-1);
+    position: relative;
+    z-index: 1;
+    blockquote{
+        p{
+            font-size: 22px;
+            font-style: italic;
+            line-height: 32px;
+            color: var(--clr-common-heading);
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+        p {
+            cite {
+                font-size: 18px;
+                display: block;
+                color: var(--clr-common-heading);
+                font-weight: 500;
+                font-style: normal;
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    background: var(--clr-theme-1);
+                    height: 2px;
+                    width: 63px;
+                    top: -4px;
+                    margin-right: 10px;
+                    position: relative;
+                }
+            }
+        }
+    }
+    &-icon{
+        z-index: -1;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        i{
+            font-size: 82px;
+            color: #e5eafb;
+        }
+    }
+}
+// quotation style two end here
+
+// quotation style three start here
+.quotation_style-three-items {
+	padding: 93px 70px 70px 40px;
+	background: #ffd500;
+	width: 418px;
+    margin: 0 auto;
+    z-index: 1;
+    @media #{$xs}{
+        padding: 30px 30px 30px 9px;
+        width: 250px;
+    }
+     p{
+        font-size: 32px;
+        color: var(--clr-common-heading);
+        line-height: 38px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        @media #{$xs}{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    p{
+        cite {
+            font-size: 18px;
+            display: block;
+            color: var(--clr-common-heading);
+            font-weight: 500;
+            font-style: normal;
+            text-align: right;
+            @media #{$xs}{
+                font-size: 16px;
+            }
+            &::before {
+                content: "";
+                display: inline-block;
+                background: var(--clr-common-heading);
+                height: 3px;
+                width: 22px;
+                top: -4px;
+                margin-right: 10px;
+                position: relative;
+            }
+        }
+    }
+   &-border {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: 5px solid var(--clr-common-heading);
+	position: absolute;
+	top: -30px;
+	left: -30px;
+    z-index: -1;
+    @media #{$xs}{
+        top: -25px;
+        left: -15px;
+    }
+   }
+}
+
+.quotation_style-three-items-border::after {
+	content: "\f10d";
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+    font-size: 50px;
+    color: var(--clr-common-heading);
+    left: 33px;
+    background: var(--clr-common-white);
+    top: -26px;
+    padding: 0px 11px;
+    font-weight: 900;
+}
+.quotation_style-three-items-border::before {
+	content: "\f10e";
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+    font-size: 50px;
+    right: 35px;
+    background: #ffd500;
+    bottom: -20px;
+    padding: 0px 11px;
+    color: var(--clr-common-heading);
+    font-weight: 900;
+}
+// quotation style three end here

@@ -1,0 +1,333 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   23. button-widgets CSS
+/*----------------------------------------*/
+.button__widets{
+    &-title{
+        h4{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+    &-group{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+       
+    }
+}
+
+// primary-btn design start here
+.primary-btn{
+    font-size: 16px;
+	color: var(--clr-common-white);
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	width: 160px;
+	border-radius: 3px;
+	display: inline-block;
+	background: var(--clr-common-blue);
+	font-weight: 500;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+    border: 1px solid transparent;
+    @include transition(.3s);
+    &:hover{
+        color: var(--clr-theme-1);
+        background-color: transparent;
+        border: 1px solid var(--clr-theme-1);
+    }
+}
+.primary-btn-radius{
+    font-size: 16px;
+	color: var(--clr-common-white);
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	width: 160px;
+	border-radius: 30px;
+	display: inline-block;
+	background: var(--clr-common-blue);
+	font-weight: 500;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+    border: 1px solid transparent;
+    &:hover{
+        color: var(--clr-theme-1);
+        background-color: transparent;
+        border: 1px solid var(--clr-theme-1);
+    }
+}
+.primary-btn-transparent{
+    font-size: 16px;
+	color: var(--clr-theme-1);
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	width: 160px;
+	border-radius: 30px;
+	display: inline-block;
+	background: transparent;
+	font-weight: 500;
+	border: 1px solid var(--clr-theme-1);
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+    @include transition(.3s);
+    &:hover{
+        background-color: var(--clr-theme-1);
+        color: var(--clr-common-white);
+    }
+}
+.primary-btn-text{
+    font-size: 16px;
+	color: var(--clr-common-heading);
+	height: 55px;
+	line-height: 55px;
+	text-align: center;	
+	border-radius: 30px;
+	display: inline-block;
+	background: none;
+	font-weight: 500;
+	border: none;
+	outline: none;    
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+    &:hover{
+        color: var(--clr-theme-1);
+    }
+  
+}
+.primary-btn-border-btm{
+    &:before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 75px;
+        bottom: 15px;
+        background-color: var(--clr-theme-1);
+    }
+}
+
+.secondary-btn-border-btm{
+    &:before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 75px;
+        bottom: 15px;
+        background-color: var(--clr-bg-secondary);
+    }
+    &:hover{
+        color: var(--clr-common-heading);
+    }
+}
+.success-btn-border-btm{
+    &:before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 75px;
+        bottom: 15px;
+        background-color: var(--clr-bg-success);
+       
+    }
+    &:hover{
+        color: var(--clr-bg-success);
+    }
+}
+.warning-btn-border-btm{
+    &:before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 75px;
+        bottom: 15px;
+        background-color: var(--clr-bg-warning);
+    }
+    &:hover{
+        color: var(--clr-bg-warning);
+    }
+}
+.danger-btn-border-btm{
+    &:before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 75px;
+        bottom: 15px;
+        background-color: var(--clr-bg-danger);
+    }
+    &:hover{
+        color: var(--clr-bg-danger);
+    }
+}
+.information-btn-border-btm{
+    &:before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 75px;
+        bottom: 15px;
+        background-color: var(--clr-bg-information);
+    }
+    &:hover{
+        color: var(--clr-bg-information);
+    }
+}
+// primary-btn design end here
+
+// secondary-btn design start here
+.secondary-btn{
+    background-color: var(--clr-bg-secondary);
+    &:hover{
+        background-color: transparent;
+        color: var(--clr-common-heading);
+        border: 1px solid var(--clr-common-heading);
+    }
+}
+.secondary-btn-radius{
+    background-color: var(--clr-bg-secondary);
+    border-radius: 30px;
+    &:hover{
+        background-color: transparent;
+        color: var(--clr-common-heading);
+        border: 1px solid var(--clr-common-heading);
+    }
+}
+.secondary-btn-transparent{
+    border: 1px solid var(--clr-common-heading);
+    color: var(--clr-common-heading);
+    &:hover{
+        background-color: var(--clr-common-heading);
+        color: var(--clr-common-white);
+        border: 1px solid var(--clr-common-heading);
+    }
+}
+
+// secondary-btn design end here
+
+// success-btn design start here
+.success-btn{
+    background-color: var(--clr-bg-success);
+    &:hover{
+        background-color: transparent;
+        border: 1px solid var(--clr-bg-success);
+        color: var(--clr-bg-success);
+    }
+}
+.success-btn-radius{
+    background-color: var(--clr-bg-success);
+    border-radius: 30px;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid var(--clr-bg-success);
+        color: var(--clr-bg-success);
+    }
+}
+.success-btn-transparent{
+    border: 1px solid var(--clr-bg-success);
+    color: var(--clr-bg-success);
+    &:hover{
+        background-color: var(--clr-bg-success);
+        border: 1px solid var(--clr-bg-success);
+        color: var(--clr-common-white);
+    }
+}
+// success-btn design end here
+
+// warning-btn design start here
+.warning-btn{
+    background-color: var(--clr-bg-warning);
+    &:hover{
+        background-color: transparent;
+        border: 1px solid var(--clr-bg-warning);
+        color: var(--clr-bg-warning);
+    }
+}
+.warning-btn-radius{
+    background-color: var(--clr-bg-warning);
+    border-radius: 30px;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid var(--clr-bg-warning);
+        color: var(--clr-bg-warning);
+    }
+}
+.warning-btn-transparent{
+    border: 1px solid var(--clr-bg-warning);
+    color: var(--clr-bg-warning);
+    &:hover{
+        background-color: var(--clr-bg-warning);
+        border: 1px solid var(--clr-bg-warning);
+        color: var(--clr-common-white);
+    }
+}
+// warning-btn design end here
+
+// Danger Button design strat here
+.danger-btn{
+    background-color: var(--clr-bg-danger);
+    &:hover{
+        background-color: transparent;
+        color: var(--clr-bg-danger);
+        border: 1px solid var(--clr-bg-danger);
+    }
+}
+.danger-btn-radius{
+    background-color: var(--clr-bg-danger);
+    border-radius: 30px;
+    &:hover{
+        background-color: transparent;
+        color: var(--clr-bg-danger);
+        border: 1px solid var(--clr-bg-danger);
+    }
+}
+.danger-btn-transparent{
+    border: 1px solid var(--clr-bg-danger);
+    color: var(--clr-bg-danger);
+    &:hover{
+        background-color: var(--clr-bg-danger);
+        color: var(--clr-common-white);
+        border: 1px solid var(--clr-bg-danger);
+    }
+}
+// Danger Button design end here
+
+// information Button design strat here
+.information-btn{
+    background-color: var(--clr-bg-information);
+    &:hover{
+        background-color: transparent;
+        border: 1px solid var(--clr-bg-information);
+        color: var(--clr-bg-information);
+    }
+}
+.information-btn-radius{
+    background-color: var(--clr-bg-information);
+    border-radius: 30px;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid var(--clr-bg-information);
+        color: var(--clr-bg-information);
+    }
+}
+.information-btn-transparent{
+    border: 1px solid var(--clr-bg-information);
+    color: var(--clr-bg-information);
+    &:hover{
+        background-color: var(--clr-bg-information);
+        border: 1px solid var(--clr-bg-information);
+        color: var(--clr-common-white);
+    }
+}
+// information Button design end here

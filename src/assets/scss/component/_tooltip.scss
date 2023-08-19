@@ -1,0 +1,71 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   28. tooltip CSS
+/*----------------------------------------*/
+
+.tooltip__content{
+    p{        
+        a{
+            position: relative;
+            &:before{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 4px;
+                background-color: #9494f7;
+                bottom: 2px;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.direction_steps {
+	display: inline-flex;
+	align-items: center;
+    text-align: center;
+    & .direction_step{
+        margin-right: 23px;
+        font-weight: 500;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+    @media #{$xs}{
+        display: block;
+    }
+}
+.direction_step + .direction_step  {
+	position: relative;
+    &:before{
+        content: "\f178";
+        font-family: "Font Awesome 5 Pro";
+        position: absolute;
+        left: -18px;
+        font-weight: 400;
+        font-size: 13px;
+        top: 1px;
+        @media #{$xs}{
+            top: -3px;
+        }
+    }
+}
+.direction_steps-bg {
+	border-radius: 3px;
+    background: #9494f7;
+	padding: 0px 9px;
+    color: var(--clr-common-white);
+}
+.direction_steps-button {
+    & .direction_step {
+        height: 22px;
+        border-radius: 3px;
+        background: #9494f7;
+        line-height: 22px;
+        padding: 0px 9px;
+        color: var(--clr-common-white);
+        &:before{
+            color: var(--clr-common-body);
+        }
+    }
+}

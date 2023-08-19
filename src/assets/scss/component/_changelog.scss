@@ -1,0 +1,136 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  43. changelog CSS
+/*----------------------------------------*/
+.du_changelog_info {
+	& .version_info {
+		position: relative;
+		height: 100%;
+		left: -20px;
+		@media #{$lg} {
+			left: -7px;
+		}
+	}
+	& .line {
+		height: 100%;
+		width: 1px;
+		background: #e2e5ee;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		z-index: 1;
+		@media #{$md,$sm,$xs} {
+			display: none;
+		}
+	}
+	& .du_changelog_date {
+		display: flex;
+		text-align: right;
+		padding-top: 53px;
+		justify-content: end;
+		@media #{$md,$sm,$xs} {
+			justify-content: start;
+			text-align: left;
+			padding-top: 0px;
+		}
+	}
+}
+.du_changelog_date-3 {
+	margin-top: 20px;
+}
+.du_changelog_date-4 {
+	padding-top: 30px !important;
+}
+.c_version-4 {
+	position: absolute;
+	top: 41%;
+}
+.c_version {
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background-color: var(--clr-common-white);
+	z-index: 2;
+	border-radius: 50%;
+	left: 6px;
+	top: 27%;
+	border: 1px solid #e9e9e9;
+	text-align: center;
+	line-height: 22px;
+	@media #{$lg} {
+		left: -2px;
+	}
+	@media #{$md,$sm,$xs} {
+		display: none;
+	}
+	span {
+		width: 8px;
+		height: 8px;
+		background-color: var(--clr-common-heading);
+		z-index: 3;
+		display: inline-block;
+		border-radius: 50%;
+		text-align: center;
+	}
+}
+.c_date {
+	h6 {
+		margin-bottom: 15px;
+		font-size: 20px;
+		@media #{$lg} {
+			font-size: 16px;
+		}
+	}
+	span {
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+		padding: 0px 20px;
+		background: var(--clr-common-heading);
+		color: var(--clr-common-white);
+		border-radius: 3px;
+	}
+}
+.du_changelog_info .c_version {
+	margin: 0 auto;
+}
+
+.du_changelog_content {
+	margin-left: -15px;
+	@media #{$md,$sm,$xs} {
+		margin-left: 0px;
+	}
+	p {
+		display: flex;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+	span {
+		font-weight: 400;
+		font-size: 12px;
+		color: var(--clr-common-white);
+		padding: 0 10px;
+		text-transform: uppercase;
+		min-width: 90px;
+		display: inline-block;
+		text-align: center;
+		line-height: 26px;
+		border-radius: 3px;
+		margin-right: 20px;
+		height: 25px;
+		flex: 0;
+		letter-spacing: 0.8px;
+	}
+}
+
+.du_changelog_content span.added {
+	background: var(--clr-common-green4);
+}
+.du_changelog_content span.fixed,
+.deleted {
+	background-color: var(--clr-common-red3);
+}
+.du_changelog_content span.updated {
+	background-color: var(--clr-common-blue2);
+}

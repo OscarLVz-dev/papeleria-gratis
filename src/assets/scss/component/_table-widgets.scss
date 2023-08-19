@@ -1,0 +1,189 @@
+@use "../abstract"as *;
+/*----------------------------------------*/
+/*   29. table-widgets CSS
+/*----------------------------------------*/
+.documentation__table {
+    overflow-x: auto;
+    & .table-control {
+        th {
+            padding: 9px 20px 9px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--clr-common-heading);
+
+            &:first-child {
+                width: 6%;
+                text-align: center;
+                padding-left: 21px;
+            }
+        }
+
+        td {
+            padding: 9px 20px 9px 30px;
+            font-size: 16px;
+            color: var(--clr-common-body);
+
+            &:first-child {
+                text-align: center;
+                padding-left: 21px;
+            }
+        }
+    }
+}
+
+
+.documentation__table .table-control th:nth-child(2) {
+    padding: 9px 20px 9px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--clr-common-heading);
+    width: 34%;
+    min-width: 100px;
+    width: 33%;
+}
+
+.documentation__table .table-control th:nth-child(3) {
+    width: 22%;
+    min-width: 100px;
+}
+
+.documentation__table .table-control th:nth-child(4) {
+    width: 20%;
+    min-width: 100px;
+}
+
+.documentation__table .table-control th:nth-child(5) {
+    width: 22%;
+    min-width: 100px;
+}
+
+// background table start here
+
+.documentation__table-bg .table> :not(caption)>*>* {
+    background-color: var(--bs-table-bg);
+    background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
+    border-bottom-width: 0px;
+}
+
+.documentation__table-bg .table-striped>tbody>tr:nth-child(1) {
+    background: var(--clr-common-body);
+
+    th {
+        color: var(--clr-common-white);
+    }
+}
+
+.documentation__table-bg .table-control th:nth-child(2) {
+    color: var(--clr-common-white);
+}
+
+// background table end here
+.documentation__table-modern{
+    overflow-x: auto;
+}
+.documentation__table-modern .table-control th {
+    line-height: 53px;
+    background-color: var(--clr-common-tb-color);
+    color: var(--clr-common-white);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.documentation__table-modern .table-control th:nth-child(1) {
+    min-width: 100px;
+    width: 33%;
+    padding-left: 30px;
+}
+
+.documentation__table-modern .table-control th:nth-child(2) {
+    min-width: 100px;
+    width: 25%;
+    padding-left: 80px;
+}
+
+.documentation__table-modern .table-control th:nth-child(3) {
+    min-width: 100px;
+    width: 17%;
+
+}
+
+.documentation__table-modern .table-control th:nth-child(4) {
+    min-width: 100px;
+}
+
+.documentation__table-modern .table-control td {
+    height: 55px;
+    line-height: 55px;
+    color: var(--clr-common-body);
+    
+}
+
+.documentation__table-modern .table-control td:nth-child(1) {
+    width: 33%;
+    height: 55px;
+    line-height: 55px;
+    background-color: var(--clr-common-td-color);
+    color: var(--clr-common-white);
+    padding-left: 30px;
+}
+
+.documentation__table-modern .table-control td:nth-child(2) {
+    min-width: 100px;
+    width: 34%;
+    padding-left: 80px;
+}
+
+.documentation__table-modern .table-control td:nth-child(3) {
+    min-width: 100px;
+    width: 17%;
+}
+
+.documentation__table-modern .table> :not(caption)>*>* {
+    background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
+    border-bottom-width: 0px;
+}
+
+
+
+// Default bg table start here
+.default-table-bg{
+    overflow-x: auto;
+    .table.table-bordered {
+        border: 1px solid #272727 !important;
+    }
+    .table-control th {
+        color: var(--clr-common-white) !important;
+    }
+    .table > :not(caption) > * > * {
+       color: var(--clr-common-table-default);
+        background-color: #000;
+    }
+
+}
+.default-table-bg > .table > .table-bordered {
+    border: 1px solid #272727 ;
+}
+// Default bg table end here
+
+// Background Dark Style start here
+.default-table-striped{
+    & .table-striped > tbody > tr:nth-of-type(2n+1) {
+        --bs-table-accent-bg: var(--clr-common-table-black);
+    }
+    & .table> :not(caption)>*>* {
+        border-bottom-width: 0px !important;
+    }
+}
+// Background Dark Style end here
+
+// mordern-dark-style start here
+.mordern-dark-style{
+    overflow-x: auto;
+    .table-control {
+        background: var(--clr-common-table-black);
+    }
+  & .table-control td{
+      color: var(--clr-common-white);
+  }
+}
+// mordern-dark-style start here
