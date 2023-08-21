@@ -1,0 +1,80 @@
+@use "../abstract" as *;
+
+/*----------------------------------------*/
+/*   12. video CSS
+/*----------------------------------------*/
+.video__left {
+	@media #{$sm,$xs} {
+		margin-bottom: 30px;
+	}
+}
+.video__left-shape {
+	position: absolute;
+	left: 10%;
+	top: 4%;
+	z-index: -1;
+	@media #{$lg,$md,$sm} {
+		left: 0%;
+		top: -15%;
+	}
+	@media #{$xs} {
+		display: none;
+	}
+}
+
+.video__right {
+	box-shadow: 0px 20px 80px rgba(8, 18, 71, 0.2);
+	border-radius: 10px;
+	margin-left: -30px;
+	@media #{$lg,$sm,$xs} {
+		margin-left: 0px;
+	}
+	& img {
+		width: 100%;
+	}
+	@media #{$sm,$xs} {
+		margin-top: 0px;
+	}
+	.play-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 70px;
+		height: 70px;
+		background: linear-gradient(#5f40ff 0%, #905bfa 55.3%, #b870f6 100%);
+		display: block;
+		line-height: 70px;
+		border-radius: 50%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		animation: pulse 2s infinite;
+		color: var(--clr-common-white);
+		@include transition(0.3s);
+		&:hover {
+			color: var(--clr-bg-information);
+		}
+	}
+}
+.video__left-item {
+	padding: 20px 20px 18px 20px;
+	max-width: 275px;
+	box-shadow: 0px 20px 30px rgba(8, 18, 71, 0.08);
+	@include transition(0.3s);
+	border-radius: 5px;
+	&-title {
+		font-size: 16px;
+		color: var(--clr-common-heading);
+		font-weight: 500;
+		margin-bottom: 0px;
+		line-height: 26px;
+	}
+}
+.video__left-item2,
+.video__left-item2,
+.video__left-item3 {
+	box-shadow: none;
+
+	&:hover {
+		box-shadow: 0px 20px 30px rgba(8, 18, 71, 0.08);
+	}
+}

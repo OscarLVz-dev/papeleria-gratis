@@ -1,0 +1,33 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  35. layout CSS
+/*----------------------------------------*/
+.layout__structure{
+    &-img{
+        img{
+            width: 100%;
+        }
+    }
+    &-responsive{
+        text-align: center;
+        img{
+            width: inherit;
+        }
+        @media #{$xs} {
+            text-align: left;
+        }
+    }
+    &-featurs {
+        ul {
+            li {
+                list-style: disc;
+                font-size: 16px;
+                margin-bottom: 6px;
+                margin-left: 13px;
+                span:nth-child(1){
+                   font-weight: 500;
+                }
+            }
+        }
+    }
+}

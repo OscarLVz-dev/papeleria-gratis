@@ -1,0 +1,116 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   19. sidebar CSS
+/*----------------------------------------*/
+.du__sidebar-left {
+	margin-right: -15px;
+	&-topics {
+		h4 {
+			font-size: 24px;
+			font-family: $roboto;
+			@media #{$xxs} {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+// sidebar nav start here
+.sidebar-nav {
+	ul {
+		list-style: none;
+	}
+	& .metismenu {
+		display: flex;
+		flex-direction: column;
+		& > li {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+		}
+		& .mm-active > a {
+			background: transparent;
+			border-radius: 3px;
+			color: var(--clr-theme-1);
+			&:hover {
+				color: var(--clr-theme-1);
+			}
+			&:focus {
+				color: var(--clr-theme-1);
+			}
+		}
+		li + li {
+			&:first-child {
+				margin-top: 5px;
+			}
+		}
+		a {
+			position: relative;
+			display: block;
+			padding: 11px 0px;
+			font-size: 16px;
+			font-weight: 500;
+			color: var(--clr-common-heading);
+			@include transition(0.3s);
+			text-decoration: none;
+			&:hover {
+				color: var(--clr-theme-1) !important;
+			}
+			img {
+				margin-right: 15px;
+			}
+		}
+		ul {
+			li {
+				margin-bottom: 2px;
+				padding-left: 5px;
+				padding-right: 10px;
+				&:first-child {
+					padding-top: 15px;
+				}
+				&:last-child {
+					padding-bottom: 5px;
+				}
+			}
+			a {
+				padding: 0px;
+				font-size: 15px;
+				color: var(--clr-common-body);
+				font-weight: 400;
+				@include transition(0.3s);
+				display: flex;
+				&:hover {
+					color: var(--clr-theme-1);
+					& i {
+						color: var(--clr-theme-1);
+						vertical-align: middle;
+					}
+				}
+				i {
+					margin-right: 13px;
+					vertical-align: middle;
+					color: var(--clr-common-heading);
+				}
+			}
+			ul {
+				a {
+					padding: 10px 15px 10px 45px;
+				}
+			}
+		}
+	}
+}
+
+// .metismenu .mm-collapse {
+// 	padding: 20px;
+// }
+
+.sidebar-nav .metismenu a:hover,
+.sidebar-nav .metismenu a:focus,
+.sidebar-nav .metismenu a:active,
+.sidebar-nav .metismenu .mm-active > a {
+	color: #0c63e4;
+	text-decoration: none;
+}
+
+// sidebar nav end here

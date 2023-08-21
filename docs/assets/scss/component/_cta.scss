@@ -1,0 +1,42 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   16. cta CSS
+/*----------------------------------------*/
+.cta-btn {
+	text-align: right;
+	@media #{$sm,$xs} {
+		text-align: inherit;
+		margin-top: 30px;
+	}
+}
+.cta-title {
+	h2 {
+		font-size: 30px;
+		color: var(--clr-common-white);
+		margin-bottom: 0px;
+		@media #{$xxs} {
+			font-size: 24px;
+		}
+	}
+}
+.theme_btn_bg {
+	border: 1px solid var(--clr-common-white);
+	&:hover {
+		border: 1px solid var(--clr-common-white);
+		color: var(--clr-theme-1);
+		background-color: var(--clr-common-white);
+	}
+}
+.cta__shape1 {
+	position: absolute;
+	top: 0;
+	left: 48.2%;
+	@media #{$sm,$xs} {
+		left: 38%;
+	}
+}
+.cta__shape2 {
+	position: absolute;
+	bottom: 0;
+	left: 10.5%;
+}

@@ -1,0 +1,82 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   30. form-widgets CSS
+/*----------------------------------------*/
+
+
+// Default form start here
+
+.du-contact-form-field {
+    input, textarea {
+        color: var(--clr-common-body);
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        height: 55px;
+        background: var(--clr-common-white);
+        font-weight: 400;
+        outline: none;
+        padding: 0px 20px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid var(--clr-common-fcopy-border);
+    
+      }
+      textarea {
+        height: 180px;
+        padding: 20px;
+        resize: none;
+      }
+      
+}
+  .du-contact-form-field input::-moz-placeholder, .du-contact-form-field input::placeholder, .du-contact-form-field select::placeholder, .du-contact-form-field textarea::-moz-placeholder, .du-contact-form-field textarea::placeholder {
+    color: var(--clr-common-body);
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 1;
+    color: var(--clr-common-body);
+  }
+ 
+// Default form end here
+
+// Background form 
+.du-contact-form-field-bg  {
+    input, textarea {
+        background-color: var(--clr-bg-grey2-bg);
+        border: 1px solid var(--clr-bg-grey2-bg);
+        resize: none;
+    }
+}
+// Border Heading with Focus form start here
+.form-border-heading-field {
+    input:focus{
+        border: 1px solid var(--clr-theme-1);
+    
+    }
+    textarea:focus{
+        border: 1px solid var(--clr-theme-1);
+    
+    }
+}
+
+// Border Heading with Focus form end here
+
+.form__label {
+	position: absolute;
+	left: 14px;
+	top: 14px;
+	cursor: text;
+    @include transition(.3s);
+    padding: 0px 5px;
+}
+
+.form-border-heading-field input:focus ~ .form__label{
+    top: -11px;
+    background-color: var(--clr-common-white);
+    padding: 0px 5px;
+}
+.form-border-heading-field textarea:focus ~ .form__label{
+    top: -11px;
+    background-color: var(--clr-common-white);
+    padding: 0px 5px;
+}

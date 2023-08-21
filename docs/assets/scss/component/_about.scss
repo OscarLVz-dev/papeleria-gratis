@@ -1,0 +1,65 @@
+@use "../abstract" as *;
+
+/*----------------------------------------*/
+/*  07. about CSS 
+/*----------------------------------------*/
+
+.about-main-img {
+    img{
+        width: 100%;
+    }
+}
+
+.about-content{
+    @media #{$sm,$xs} {
+        margin-left: 0px;
+    }
+}
+.about-choose-list{
+    ul {
+        li{
+            list-style: none;
+            margin-bottom: 6px;
+            font-size: 16px;
+            i{
+                margin-right: 8px;
+                color: var(--clr-common-blue);
+            }
+        }
+    }
+}
+.about-shape {
+	position: absolute;
+	left: -3px;
+	top: 9px;
+	animation: hero-circle-1 7s linear 0s infinite alternate;
+}
+.about-shape2 {
+	position: absolute;
+    top: 34%;
+    left: 12%;
+    animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+    @media #{$xl} {
+        top: 40%;
+	    left: 6%;
+    }
+    @media #{$lg,$md,$sm,$xs} {
+        display: none;
+    }
+
+}
+.about-shape3 {
+	position: absolute;
+	right: 9%;
+	top: -18%;
+    animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+    @media #{$xl} {
+        top: -9%;
+    }
+    @media #{$lg,$md,$sm} {
+        top: 0;
+    }
+    @media #{$xs} {
+        display: none;
+    }
+}

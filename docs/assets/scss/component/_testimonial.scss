@@ -1,0 +1,132 @@
+@use "../abstract" as *;
+
+/*----------------------------------------*/
+/*  10. Testimonial
+/*----------------------------------------*/
+.grey-bg {
+	background-color: var(--clr-bg-grey-bg);
+}
+.du-testimonial-item {
+	.du-testimonial-icon {
+		i {
+			font-size: 50px;
+			line-height: 1;
+			display: inline-block;
+			color: var(--clr-theme-1);
+		}
+	}
+	p {
+		font-size: 20px;
+		line-height: 1.6;
+		font-style: italic;
+		@media #{$xs} {
+			font-size: 18px;
+		}
+	}
+	.du-testimonial-title {
+		font-size: 20px;
+		line-height: 1.12;
+		font-weight: 700;
+		margin-bottom: 3px;
+	}
+	span {
+		font-size: 14px;
+		display: block;
+	}
+}
+.testimonial-nav {
+	width: 350px;
+	margin: 0 auto;
+	@media #{$sm,$xs} {
+		width: 300px;
+	}
+	& .swiper-slide {
+		width: 90px;
+		text-align: center;
+		& .du-testimonial-img {
+			height: 80px;
+			width: 80px;
+			object-fit: cover;
+			border-radius: 50%;
+			border: 5px solid var(--clr-common-white);
+			display: inline-block;
+			& img {
+				cursor: pointer;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+.testimonial-nav
+	.swiper-slide.swiper-slide-prev
+	+ .swiper-slide-active
+	.du-testimonial-img {
+	height: 104px;
+	width: 104px;
+	border: 7px solid var(--clr-common-white);
+	transform: translateX(-12px);
+}
+.testimonial-nav .swiper-slide.swiper-slide-prev .du-testimonial-img,
+.testimonial-nav .swiper-slide.swiper-slide-next .du-testimonial-img {
+	margin-top: 13px;
+}
+
+//  testimonial 02
+.du-testimonial2 {
+	p {
+		font-size: 24px;
+		line-height: 1.4;
+		font-family: $roboto;
+		@media #{$md,$xs} {
+			font-size: 18px;
+		}
+	}
+	&-icon {
+		i {
+			font-size: 35px;
+			color: var(--clr-theme-1);
+		}
+	}
+	&__client {
+		&-img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+		}
+		&-info {
+			&-title {
+				font-family: $roboto;
+				font-weight: 700;
+				font-size: 20px;
+				color: var(--clr-common-heading);
+				margin-bottom: 3px;
+			}
+			span {
+				font-family: $roboto;
+				font-size: 14px;
+				color: var(--clr-common-body);
+			}
+		}
+	}
+}
+// swiper-pagination-team
+.swiper-pagination-team {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 20px;
+	span {
+		display: inline-block;
+		margin-right: 15px;
+		width: 10px;
+		height: 10px;
+	}
+	.swiper-pagination-bullet-active {
+		opacity: 1;
+		background: var(--clr-theme-1);
+	}
+}

@@ -1,0 +1,177 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  41. countdown CSS
+/*----------------------------------------*/
+.default-countdown-items {
+	display: flex;
+	
+}
+// default style start here
+.default-countdown{
+    margin-right: 80px;
+    text-align: center;
+    position: relative;
+    @media #{$md} {
+        margin-right: 70px;
+    }
+    @media #{$xs} {
+        margin-right: 30px;
+    }
+
+    h2{
+        font-size: 60px;
+        font-weight: 700;
+        color: var(--clr-common-heading);
+        margin-bottom: 5px;
+        line-height: 70px;
+        @media #{$xs} {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+    span{
+        display: block;
+        font-size: 18px;
+    }
+    &:before{
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 62px;
+        background-color: #E9E9E9;
+        left: 110px;
+        top: 20px;
+        @media #{$xs} {
+            left: 60px;
+            top: 10px;
+        }
+    }
+    &:last-child{
+        &:before{
+          display: none;
+        }
+    }
+}
+// default style end here
+
+// Border style start here
+.border-countdown{
+    overflow: hidden;
+    margin-right: 40px;
+    text-align: center;
+    padding: 25px 40px 22px 40px;
+    border-radius: 15px;
+    border: 2px solid var(--clr-theme-1);
+    @media #{$lg} {
+        margin-right: 20px;
+        padding: 25px 25px 22px 25px;
+    }
+    @media #{$md} {
+        margin-right: 20px;
+        padding: 25px 30px 22px 30px;
+    }
+    @media #{$sm} {
+        margin-right: 20px;
+        padding: 25px 25px 22px 25px;
+    }
+    @media #{$xs} {
+        margin-right: 5px;
+        padding: 20px 15px 18px 15px;
+    }
+    h2{
+        font-size: 60px;
+        font-weight: 700;
+        color: var(--clr-common-heading);
+        margin-bottom: 5px;
+        line-height: 70px;
+        @media #{$md,$sm,$xs} {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @media #{$xs} {
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+    span{
+        display: block;
+        font-size: 18px;
+        @media #{$xs} {
+            font-size: 16px;
+          
+        }
+    }
+}
+// Border style end here
+
+// Border style start here
+.multicolor-countdown{
+    margin-right: 40px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+    border-radius: 50%;
+    @media #{$lg} {
+        margin-right: 20px;
+        width: 130px;
+        height: 130px;
+    }
+    @media #{$md,$sm} {
+        margin-right: 20px;
+        width: 100px;
+        height: 100px;
+    }
+    @media #{$xs} {
+        margin-right: 5px;
+        width: 70px;
+        height: 70px;
+        padding-top: 10px;
+    }
+    h2{
+        font-size: 60px;
+        font-weight: 700;
+        color: var(--clr-common-white);
+        margin-bottom: 5px;
+        line-height: 70px;
+        @media #{$lg} {
+           font-size: 40px;
+           line-height: 50px;
+        }
+        @media #{$md,$sm} {
+            font-size: 30px;
+            line-height: 40px;
+         }
+         @media #{$xs} {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 0px;
+         }
+    }
+    span{
+        display: block;
+        font-size: 18px;
+        color: var(--clr-common-white);
+        @media #{$md,$sm} {
+            font-size: 16px;
+            
+         }
+         @media #{$xs} {
+            font-size: 14px;
+            
+         }
+    }
+    &:nth-child(1){
+        background-color: #EE7F35;
+    }
+    &:nth-child(2){
+        background-color: #4DC873;
+    }
+    &:nth-child(3){
+        background-color: #4E92FF;
+    }
+    &:nth-child(4){
+        background-color: #D851AB;
+    }
+}
+// Border style end here

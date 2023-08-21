@@ -1,0 +1,43 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*  33. video-widgets CSS
+/*----------------------------------------*/
+.vimeo__video {
+	iframe {
+		width: 100%;
+		height: 456px;
+		@media #{$xl} {
+			height: 430px;
+		}
+		@media #{$lg} {
+			height: 345px;
+		}
+		@media #{$md} {
+			height: 273px;
+		}
+		@media #{$sm} {
+			height: 296px;
+		}
+		@media #{$xs} {
+			height: 173px;
+		}
+	}
+}
+.youtube__video {
+	iframe {
+		width: 100%;
+		height: 456px;
+		@media #{$xl} {
+			height: 430px;
+		}
+		@media #{$lg} {
+			height: 345px;
+		}
+		@media #{$md,$sm,$xs} {
+			height: 250px;
+		}
+		@media #{$xxs} {
+			height: 180px;
+		}
+	}
+}

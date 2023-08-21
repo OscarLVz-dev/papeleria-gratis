@@ -1,0 +1,149 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   13. faq CSS
+/*----------------------------------------*/
+.faq-area {
+	@media #{$lg} {
+		padding-top: 100px;
+	}
+}
+.faq-content .accordion-body {
+	padding: 20px 30px 20px;
+	@media #{$md} {
+		padding: 20px 20px 20px;
+	}
+	@media #{$xs} {
+		padding: 20px 15px 20px;
+	}
+	p {
+		margin-bottom: 0px;
+		font-size: 16px;
+	}
+}
+.faq-content .accordion-item {
+	background: #fff;
+	box-shadow: 0px 0px 30px rgba(10, 31, 90, 0.08);
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+.faq-content .accordion-item .accordion-header {
+	padding: 0px 30px;
+	@media #{$md} {
+		padding: 0px 20px;
+	}
+	@media #{$xs} {
+		padding: 0px 15px;
+	}
+}
+.faq-content .accordion-item .accordion-button {
+	border-radius: 0;
+	font-size: 18px;
+	font-weight: 500;
+	height: 70px;
+	padding: 0px 0px;
+	color: var(--clr-common-heading);
+	text-align: left;
+	@media #{$xs} {
+		font-size: 16px;
+	}
+}
+.faq-white .accordion-button {
+	color: #222429;
+	background: #ffffff;
+	border: 1px solid transparent;
+	font-size: 18px;
+	font-weight: 500;
+	color: #1a1c20;
+}
+.faq-white .accordion-button:focus {
+	z-index: 3;
+	border-color: none;
+	outline: 0;
+	box-shadow: none;
+}
+.accordion-button::after {
+	font-family: "Font Awesome 5 pro";
+	width: auto;
+	height: auto;
+	margin-left: auto;
+	content: "\f067";
+	background: none !important;
+	color: var(--clr-common-heading);
+	font-size: 16px;
+}
+.accordion-button:not(.collapsed)::after {
+	content: "\f068";
+	font-family: "Font Awesome 5 Pro";
+	color: var(--clr-common-heading);
+	font-size: 16px;
+}
+.faq-content .accordion-collapse {
+	border: none;
+}
+.accordion-button:not(.collapsed) {
+	border-bottom: 1px solid #f1f1f1;
+}
+
+// home 2 faq
+
+.course-tabs {
+	margin-right: -30px;
+	@media #{$sm,$xs,$md} {
+		margin-right: 0px;
+	}
+}
+.home2-faq {
+	padding: 30px 30px 30px;
+	border-radius: 10px;
+	background: var(--clr-common-white);
+	margin-left: 70px;
+	background: var(--clr-common-white);
+	@media #{$lg} {
+		padding: 20px 20px;
+		margin-left: 40px;
+	}
+	@media #{$md} {
+		padding: 30px 20px 30px;
+	}
+	@media #{$sm,$xs,$md} {
+		margin-left: 0px;
+	}
+	@media #{$xs} {
+		padding: 15px;
+	}
+	& .nav-pills .nav-link.active,
+	.nav-pills .show > .nav-link {
+		color: var(--clr-common-white);
+		background-color: var(--clr-theme-1);
+		font-weight: 500;
+	}
+	& .nav-pills .nav-link {
+		text-align: left;
+		color: var(--clr-common-heading);
+		font-size: 16px;
+		font-weight: 400;
+		height: 55px;
+		position: relative;
+		padding-left: 20px;
+		@include transition(0.3s);
+		@media #{$md} {
+			padding-left: 15px;
+		}
+		&:hover {
+			&:before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			height: 30px;
+			width: 3px;
+			left: 0;
+			background: var(--clr-theme-1);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}

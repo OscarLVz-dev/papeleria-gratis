@@ -1,0 +1,47 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   15. terms CSS
+/*----------------------------------------*/
+.terms-bg{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+}
+.terms-shape {
+	position: absolute;
+	top: -89%;
+	z-index: -1;
+	left: 5%;
+	@media #{$md} {
+		top: -23%;
+		width: 50%;
+	}
+	@media #{$sm,$xs} {
+	    display: none;
+	}
+}
+.terms__section{
+	@media #{$lg,$md,$sm,$xs} {
+        padding: 0px 50px;
+    }
+	@media #{$xs} {
+        padding: 0px 15px;
+    }
+	&-img{
+		img {
+			margin-top: 25px;
+			@media #{$sm,$xs} {
+				width: 100%;
+			}
+		  }
+	}
+
+}
+  .terms-content {
+	padding: 90px 0px 72px 0px;
+	@media #{$sm,$xs} {
+		padding: 50px 0px 60px 0px;
+	}
+  }
+

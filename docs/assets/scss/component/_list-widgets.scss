@@ -1,0 +1,48 @@
+@use "../abstract" as *;
+/*----------------------------------------*/
+/*   21. list-widgets CSS
+/*----------------------------------------*/
+.list__widgets{
+    &-title{
+        h3{
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--clr-common-heading);
+        }        
+    }
+    &-items{
+        ul {
+            margin-left: 45px;
+            li{
+                font-size: 16px;
+                margin-bottom: 8px;
+                
+            }
+        }
+    }
+    .order-list{
+        li{
+            list-style-type: decimal;
+        }
+    }
+    .unorder-list{
+        li{
+            list-style-type: disc;
+        }
+    }
+    .roman-list{
+        li{
+            list-style-type: upper-roman;
+        }
+    }
+    .check-list{
+        li{
+            i{
+                margin-left: -24px;
+                margin-right: 9px;
+                color: var(--clr-theme-1);
+            }
+        }
+       
+    }
+}
