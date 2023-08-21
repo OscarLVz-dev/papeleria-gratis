@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production --base-href=https://github.com/OscarLVz-dev/papeleria-gratis/",
+    "build": "ng build --configuration production --base-href=https://oscarlvz-dev.github.io/papeleria-gratis/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
