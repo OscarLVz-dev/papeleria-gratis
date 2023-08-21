@@ -30,7 +30,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
               "src/assets/css/preloader.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/meanmenu.css",
@@ -45,7 +44,8 @@
               "src/assets/css/flaticon.css",
               "src/assets/css/default.css",
               "src/assets/css/codemirror.css",
-              "src/assets/css/codemirror-theme.css"
+              "src/assets/css/codemirror-theme.css",
+              "src/styles.scss"
             ],
             "scripts": [
               "src/assets/js/vendor/jquery-3.6.0.min.js",
