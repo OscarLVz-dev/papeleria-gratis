@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  openSideBar:boolean = false;
+
+  toggleSidebar(){
+    this.openSideBar = !this.openSideBar;
+  }
+
 }
