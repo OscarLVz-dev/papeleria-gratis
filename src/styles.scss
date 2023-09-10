@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+@import "./assets/scss/colors.scss";
+
 /*-----------------------------------------------------------------------------------
 
     Theme Name: Documy - Online Documentation HTML5 Template
@@ -1194,7 +1197,7 @@ color: #b1b1b1;
 }
 .banner2-height {
   padding: 195px 0px 100px 0px;
-  background: linear-gradient(#a1caee  0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(#a1c3ee 0%, rgba(255, 255, 255, 0) 100%);
 }
 @media (max-width: 575px) {
   .banner2-height {
