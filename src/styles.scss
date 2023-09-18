@@ -643,10 +643,10 @@ p {
      @color declaration
      */
   --clr-theme-1: #e49c1a; //Color principal
+  --clr-common-blue: #e49c1a;
 
   --clr-common-white: #fff;
   --clr-common-black: #000;
-  --clr-common-blue: #3817E3;
   --clr-common-blue2: #348CFF;
   --clr-common-tb-color: #4F32E2;
   --clr-common-td-color: #6B51F1;
@@ -3617,7 +3617,7 @@ color: #b1b1b1;
 }
 .duteam-img::before {
   position: absolute;
-  background: linear-gradient(rgba(26, 28, 32, 0.02) 60%, #352874 100%);
+  background: linear-gradient(rgba(26, 28, 32, 0.02) 60%, var(--clr-theme-1) 100%);
   content: "";
   top: 0;
   left: 0;
