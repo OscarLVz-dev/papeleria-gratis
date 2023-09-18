@@ -1,3 +1,18 @@
+@import "/src/assets/scss/colors.scss";
+
+.footer__widget-logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: $gray;
+    font-weight: 600;
+
+    .logo {
+        max-width: 50px !important;
+    }
+
+}
+
 .footer-shape1 {
     position: absolute;
     right: 0px;
