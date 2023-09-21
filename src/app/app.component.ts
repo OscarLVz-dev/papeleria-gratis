@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent implements OnInit{
   title = 'papeleria-gratis';
 
   ngOnInit(): void {
-    console.log(":D");    
+    console.log(":D production: "+environment.production);    
   }
   
 }
