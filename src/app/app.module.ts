@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/commons/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FooterComponent } from './components/commons/footer/footer.component';
 import { PreLoaderComponent } from './components/commons/pre-loader/pre-loader.component';
+import { HomeCategoriesComponent } from './components/pages/home/home-categories/home-categories.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PreLoaderComponent } from './components/commons/pre-loader/pre-loader.c
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    PreLoaderComponent
+    PreLoaderComponent,
+    HomeCategoriesComponent
   ],
   imports: [
     BrowserModule,
