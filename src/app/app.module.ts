@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { FooterComponent } from './components/commons/footer/footer.component';
 import { PreLoaderComponent } from './components/commons/pre-loader/pre-loader.component';
 import { HomeCategoriesComponent } from './components/pages/home/home-categories/home-categories.component';
+import { HomeTopProductsComponent } from './components/pages/home/home-top-products/home-top-products.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeCategoriesComponent } from './components/pages/home/home-categories
     HomeComponent,
     FooterComponent,
     PreLoaderComponent,
-    HomeCategoriesComponent
+    HomeCategoriesComponent,
+    HomeTopProductsComponent
   ],
   imports: [
     BrowserModule,
