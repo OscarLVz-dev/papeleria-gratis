@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { CategoriesService } from './services/categories.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
-  
+export class AppComponent implements OnInit {
+
   title = 'papeleria-gratis';
 
+  constructor(private categoriesService: CategoriesService) { }
+
   ngOnInit(): void {
-    console.log(":D production: "+environment.production);    
+    this.categoriesService.findUserById().subscribe(response => {
+      console.log(response);
+    });
   }
-  
+
 }
