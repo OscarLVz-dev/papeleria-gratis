@@ -11,6 +11,7 @@ import { PreLoaderComponent } from './components/commons/pre-loader/pre-loader.c
 import { HomeCategoriesComponent } from './components/pages/home/home-categories/home-categories.component';
 import { HomeTopProductsComponent } from './components/pages/home/home-top-products/home-top-products.component';
 import { HomeSearchBarComponent } from './components/pages/home/home-search-bar/home-search-bar.component';
+import { CommonData } from './constants/common-data';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { HomeSearchBarComponent } from './components/pages/home/home-search-bar/
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CommonData
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

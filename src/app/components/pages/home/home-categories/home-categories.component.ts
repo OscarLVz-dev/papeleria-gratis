@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonData } from 'src/app/constants/common-data';
 
 @Component({
   selector: 'home-categories',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-categories.component.scss']
 })
 export class HomeCategoriesComponent {
+
+  categories: any[] = this.commonData.categories;
+
+  constructor(
+    public commonData: CommonData
+  ) { }
 
 }

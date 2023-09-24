@@ -16,12 +16,12 @@
             <div class="col-xl-12">
                 <nav class="fearured-tabs-menu">
                     <div class="nav nav-tabs fearured-tabs-menu-link mb-70" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                            aria-selected="true">Mapas</button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                            data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                            aria-selected="false">Formatos</button>
+                        <div *ngFor="let category of commonData.categories">
+                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                aria-selected="false">{{category.name}}
+                            </button>                    
+                        </div>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">

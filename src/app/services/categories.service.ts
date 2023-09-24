@@ -10,7 +10,7 @@ export class CategoriesService {
 
   constructor(private http: HttpClient) { }
 
-  findUserById(): Observable<any> {
+  findCategories(): Observable<any> {
     return this.http.get<any>(environment.host_back + '/category/active');
   }
 }
