@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { CategoriesService } from './services/categories.service';
+import { CommonData } from './constants/common-data';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +14,11 @@ export class AppComponent implements OnInit {
   constructor(private categoriesService: CategoriesService) { }
 
   ngOnInit(): void {
-    this.categoriesService.findUserById().subscribe(response => {
-      console.log(response);
-    });
+    if (CommonData.categories==null) {
+      this.categoriesService.findUserById().subscribe(response => {
+        CommonData.categories = response;
+      });
+    }
   }
 
 }
