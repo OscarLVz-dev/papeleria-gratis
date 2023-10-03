@@ -25,144 +25,97 @@
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="Formatos" role="tabpanel"
-                        aria-labelledby="Formatos-tab">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-12">
-                                <div class="featured2 grey-bg mb-30">
-                                    <div class="featured2-icon mb-40">
-                                        <img src="assets/img/featureds/featured2-4.png"
-                                        alt="image not found">
-                                    </div>
-                                    <h4 class="featured2-title mb-23">
-                                        <a href="documy.html">Formatos</a>
-                                    </h4>
-                                    <p class="mb-40">Para estudiar la geografía física y política de México y el mundo.</p>
-                                    <a href="documy.html" class="theme-btn read-more2-btn">Ver mapas</a>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single-featured2 ml-40">
-                                    <div class="featured2-item d-flex mb-50">
-                                        <div class="featured2-item-left mr-20">
-                                            <div class="featured2-item-left-icon">
-                                                <img src="assets/img/featureds/featured2-1.png"
-                                                    alt="image not found">
-                                            </div>
+                    <div *ngFor="let category of commonData.categories; let i=index">
+                        <div *ngIf="categoriesActives[i]" class="tab-pane fade" id="{{category.name}}" role="tabpanel" [attr.aria-labelledby]="category.name+'-tab'" [class.show]="categoriesActives[i]">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-12">
+                                    <div class="featured2 grey-bg mb-30">
+                                        <div class="featured2-icon mb-40">
+                                            <img src="assets/img/featureds/featured2-4.png"
+                                            alt="image not found">
                                         </div>
-                                        <div class="featured2-item-right">
-                                            <h4 class="featured2-item-right-title mb-20">
-                                                <a href="component.html">Países</a>
-                                            </h4>
-                                            <p>Descripción de la categoría</p>
-                                        </div>
-                                    </div>
-                                    <div class="featured2-item d-flex  mb-50">
-                                        <div class="featured2-item-left mr-20">
-                                            <div class="featured2-item-left-icon">
-                                                <img src="assets/img/featureds/featured2-2.png"
-                                                    alt="image not found">
-                                            </div>
-                                        </div>
-                                        <div class="featured2-item-right">
-                                            <h4 class="featured2-item-right-title mb-20">
-                                                <a href="content.html">Estados</a>
-                                            </h4>
-                                            <p>Descripción de la categoría</p>
-                                        </div>
-                                    </div>
-                                    <div class="featured2-item d-flex mb-50">
-                                        <div class="featured2-item-left mr-20">
-                                            <div class="featured2-item-left-icon">
-                                                <img src="assets/img/featureds/featured2-3.png"
-                                                    alt="image not found">
-                                            </div>
-                                        </div>
-                                        <div class="featured2-item-right">
-                                            <h4 class="featured2-item-right-title mb-20">
-                                                <a href="code-syntax.html">Municipios </a>
-                                            </h4>
-                                            <p>Descripción de la categoría</p>
-                                        </div>
+                                        <h4 class="featured2-title mb-23">
+                                            <a href="documy.html">{{category.name}}</a>
+                                        </h4>
+                                        <p class="mb-40">{{category.description}}</p>
+                                        <a href="documy.html" class="theme-btn read-more2-btn">Ver {{category.name | lowercase }}</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single-featured2 ml-40">
-                                    <div class="featured2-item d-flex mb-50">
-                                        <div class="featured2-item-left mr-20">
-                                            <div class="featured2-item-left-icon">
-                                                <img src="assets/img/featureds/featured2-4.png"
-                                                    alt="image not found">
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="single-featured2 ml-40">
+                                        <div class="featured2-item d-flex mb-50">
+                                            <div class="featured2-item-left mr-20">
+                                                <div class="featured2-item-left-icon">
+                                                    <img src="assets/img/featureds/featured2-1.png"
+                                                        alt="image not found">
+                                                </div>
+                                            </div>
+                                            <div class="featured2-item-right">
+                                                <h4 class="featured2-item-right-title mb-20">
+                                                    <a href="component.html">Países</a>
+                                                </h4>
+                                                <p>Descripción de la categoría</p>
                                             </div>
                                         </div>
-                                        <div class="featured2-item-right">
-                                            <h4 class="featured2-item-right-title mb-20">
-                                                <a href="layout.html">Políticos</a>
-                                            </h4>
-                                            <p>Descripción de la categoría</p>
-                                        </div>
-                                    </div>
-                                    <div class="featured2-item d-flex mb-50">
-                                        <div class="featured2-item-left mr-20">
-                                            <div class="featured2-item-left-icon">
-                                                <img src="assets/img/featureds/featured2-5.png"
-                                                    alt="image not found">
+                                        <div class="featured2-item d-flex  mb-50">
+                                            <div class="featured2-item-left mr-20">
+                                                <div class="featured2-item-left-icon">
+                                                    <img src="assets/img/featureds/featured2-2.png"
+                                                        alt="image not found">
+                                                </div>
+                                            </div>
+                                            <div class="featured2-item-right">
+                                                <h4 class="featured2-item-right-title mb-20">
+                                                    <a href="content.html">Estados</a>
+                                                </h4>
+                                                <p>Descripción de la categoría</p>
                                             </div>
                                         </div>
-                                        <div class="featured2-item-right">
-                                            <h4 class="featured2-item-right-title mb-20">
-                                                <a href="core-feature.html">Geográficos</a>
-                                            </h4>
-                                            <p>Descripción de la categoría</p>
+                                        <div class="featured2-item d-flex mb-50">
+                                            <div class="featured2-item-left mr-20">
+                                                <div class="featured2-item-left-icon">
+                                                    <img src="assets/img/featureds/featured2-3.png"
+                                                        alt="image not found">
+                                                </div>
+                                            </div>
+                                            <div class="featured2-item-right">
+                                                <h4 class="featured2-item-right-title mb-20">
+                                                    <a href="code-syntax.html">Municipios </a>
+                                                </h4>
+                                                <p>Descripción de la categoría</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="Mapas" role="tabpanel" aria-labelledby="Mapas-tab">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-12">
-                                <div class="featured2 grey-bg mb-30">
-                                    <div class="featured2-icon mb-40">
-                                        <img src="assets/img/featureds/tea.png" alt="img not found">
-                                    </div>
-                                    <h4 class="featured2-title mb-23">
-                                        <a href="documy.html">Mapas</a>
-                                    </h4>
-                                    <p class="mb-40">Para tus tramites.</p>
-                                    <a href="documy.html" class="theme-btn read-more2-btn">Ver formatos</a>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single-featured2 ml-40 mb-30">
-                                    <div class="featured2-item d-flex mb-50">
-                                        <div class="featured2-item-left mr-20">
-                                            <div class="featured2-item-left-icon">
-                                                <img src="assets/img/featureds/featured2-1.png"
-                                                    alt="image not found">
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="single-featured2 ml-40">
+                                        <div class="featured2-item d-flex mb-50">
+                                            <div class="featured2-item-left mr-20">
+                                                <div class="featured2-item-left-icon">
+                                                    <img src="assets/img/featureds/featured2-4.png"
+                                                        alt="image not found">
+                                                </div>
+                                            </div>
+                                            <div class="featured2-item-right">
+                                                <h4 class="featured2-item-right-title mb-20">
+                                                    <a href="layout.html">Políticos</a>
+                                                </h4>
+                                                <p>Descripción de la categoría</p>
                                             </div>
                                         </div>
-                                        <div class="featured2-item-right">
-                                            <h4 class="featured2-item-right-title mb-15">
-                                                <a href="component.html">Escolares</a>
-                                            </h4>
-                                            <p>Descripción de la categoría</p>
-                                        </div>
-                                    </div>
-                                    <div class="featured2-item d-flex mb-50">
-                                        <div class="featured2-item-left mr-20">
-                                            <div class="featured2-item-left-icon">
-                                                <img src="assets/img/featureds/featured2-2.png"
-                                                    alt="image not found">
+                                        <div class="featured2-item d-flex mb-50">
+                                            <div class="featured2-item-left mr-20">
+                                                <div class="featured2-item-left-icon">
+                                                    <img src="assets/img/featureds/featured2-5.png"
+                                                        alt="image not found">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="featured2-item-right">
-                                            <h4 class="featured2-item-right-title mb-15">
-                                                <a href="content.html">Tramites</a>
-                                            </h4>
-                                            <p>Descripción de la categoría</p>
+                                            <div class="featured2-item-right">
+                                                <h4 class="featured2-item-right-title mb-20">
+                                                    <a href="core-feature.html">Geográficos</a>
+                                                </h4>
+                                                <p>Descripción de la categoría</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
