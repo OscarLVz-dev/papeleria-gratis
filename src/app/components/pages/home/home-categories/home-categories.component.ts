@@ -9,9 +9,19 @@ import { CommonData } from 'src/app/constants/common-data';
 export class HomeCategoriesComponent {
 
   categories: any[] = this.commonData.categories;
+  categoriesActives: any[]=[true];
 
   constructor(
     public commonData: CommonData
   ) { }
+
+  /**
+   * Activate selected category. Disable others.
+   * @param index 
+   */
+  togleCategory(index:number){
+    this.categoriesActives=[];
+    this.categoriesActives[index]=true;
+  }
 
 }
