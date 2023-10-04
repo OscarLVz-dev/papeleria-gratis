@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonData } from 'src/app/constants/common-data';
 import { SubCategoriesService } from 'src/app/services/sub-categories.service';
 
@@ -7,7 +7,7 @@ import { SubCategoriesService } from 'src/app/services/sub-categories.service';
   templateUrl: './home-categories.component.html',
   styleUrls: ['./home-categories.component.scss']
 })
-export class HomeCategoriesComponent {
+export class HomeCategoriesComponent implements OnInit {
 
   categories: any[] = this.commonData.categories;
   categoriesActives: any[]=[true];
@@ -17,8 +17,12 @@ export class HomeCategoriesComponent {
     private subCategoriesService: SubCategoriesService
   ) { }
 
+  ngOnInit(): void {
+    this.getSubCategories(1);
+  }
+
   /**
-   * Click category name
+   * Seleccion de categoria
    * @param index 
    */
   selectCategory(index:number, idCategory:number){
@@ -27,7 +31,8 @@ export class HomeCategoriesComponent {
   }
 
   /**
-   * Activate selected category. Disable others.
+   * Activa la categoria seleccionada
+   * -Desactiva el resto de categorias
    * @param index 
    */
   togleCategory(index:number){
@@ -36,17 +41,14 @@ export class HomeCategoriesComponent {
   }
 
   /**
-   * Get subcategories by category id
+   * Obtiene las subcategorias por id de categoria
+   * -Valida si ya se cuenta con la informacion de la subcategoria 
    */
   getSubCategories(idCategory:number){
-    console.log("Consultando sub categorias...");    
     if (!this.commonData.subCategories[idCategory]) {
-      console.log("No existe");
       this.subCategoriesService.findSubCategoriesByCategory(idCategory).subscribe(response => {
         this.commonData.subCategories[idCategory] = response;
       });
-    } else {
-      console.log("Ya existe");      
     }
   }
 
