@@ -4,5 +4,6 @@ import { Injectable } from "@angular/core";
 export class CommonData {
 
     categories: any[] = [];
+    subCategories: any[] = [];
 
 };
