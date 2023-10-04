@@ -11,6 +11,6 @@ export class SubCategoriesService {
   constructor(private http: HttpClient) { }
 
   findSubCategoriesByCategory(idCategory:number): Observable<any> {
-    return this.http.get<any>(environment.host_back + '/active?idCategory='+idCategory);
+    return this.http.get<any>(environment.host_back + '/subcategory/active?idCategory='+idCategory);
   }
 }

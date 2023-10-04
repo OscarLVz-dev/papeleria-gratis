@@ -18,7 +18,7 @@
                     <div class="nav nav-tabs fearured-tabs-menu-link mb-70" id="nav-tab" role="tablist">
                         <div *ngFor="let category of commonData.categories; let i=index">
                             <button class="nav-link" id="{{category.name}}-tab" data-bs-toggle="tab"
-                               [attr.data-bs-target]="'#' + category.name" type="button" role="tab" aria-controls="nav-home" (click)="togleCategory(i)" [class.active]="categoriesActives[i]">
+                               [attr.data-bs-target]="'#' + category.name" type="button" role="tab" aria-controls="nav-home" (click)="selectCategory(i, category.id)" [class.active]="categoriesActives[i]">
                                 {{category.name}}
                             </button>                    
                         </div>
@@ -43,18 +43,19 @@
                                 </div>
                                 <div class="col-xl-8 col-lg-8 col-md-6">
                                     <div class="row single-featured2 ml-40">
-                                        <div class="col-12 col-lg-6 featured2-item d-flex mb-50">
-                                            <div class="featured2-item-left mr-20">
-                                                <div class="featured2-item-left-icon">
-                                                    <img src="assets/img/featureds/featured2-1.png"
-                                                        alt="image not found">
+                                        <div *ngFor="let subCategory of commonData.subCategories[category.id]; let i=index">
+                                            <div class="col-12 col-lg-6 featured2-item d-flex mb-50">
+                                                <div class="featured2-item-left mr-20">
+                                                    <div class="featured2-item-left-icon">
+                                                        <img src="assets/img/featureds/featured2-1.png" alt="image not found">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="featured2-item-right">
-                                                <h4 class="featured2-item-right-title mb-20">
-                                                    <a href="component.html">Países</a>
-                                                </h4>
-                                                <p>Descripción de la categoría</p>
+                                                <div class="featured2-item-right">
+                                                    <h4 class="featured2-item-right-title mb-20">
+                                                        <a href="component.html">{{subCategory.name}}</a>
+                                                    </h4>
+                                                    <p>{{subCategory.description}}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
