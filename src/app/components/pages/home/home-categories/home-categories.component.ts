@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CommonData } from 'src/app/constants/common-data';
 import { SubCategoriesService } from 'src/app/services/sub-categories.service';
 
@@ -15,19 +14,9 @@ export class HomeCategoriesComponent implements OnInit {
   categories: any[] = this.commonData.categories;
 
   constructor(
-    private router: Router,
-    routed: ActivatedRoute,
     public commonData: CommonData,
     private subCategoriesService: SubCategoriesService
   ) { 
-    let paramId = routed.snapshot.paramMap.get('id');
-    
-    if (isNaN(parseInt(paramId))) {
-      this.router.navigate(['/categorias']);
-    }else if(paramId){
-      this.categorySelectedId = parseInt(paramId);
-      this.categoriesActives = [];
-    }
   }
 
   ngOnInit(): void {

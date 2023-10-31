@@ -5,7 +5,6 @@ import { HomeCategoriesComponent } from './components/pages/home/home-categories
 
 const routes: Routes = [
   { path: 'categorias', component: HomeCategoriesComponent, pathMatch: 'prefix' },
-  { path: 'categorias/:id', component: HomeCategoriesComponent, pathMatch: 'prefix' },
   { path: '', component: HomeComponent },
 ];
 
