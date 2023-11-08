@@ -12,6 +12,7 @@ import { HomeCategoriesComponent } from './components/pages/home/home-categories
 import { HomeTopProductsComponent } from './components/pages/home/home-top-products/home-top-products.component';
 import { HomeSearchBarComponent } from './components/pages/home/home-search-bar/home-search-bar.component';
 import { CommonData } from './constants/common-data';
+import { CategoryComponent } from './components/pages/category/category.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommonData } from './constants/common-data';
     PreLoaderComponent,
     HomeCategoriesComponent,
     HomeTopProductsComponent,
-    HomeSearchBarComponent
+    HomeSearchBarComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
